@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+  /*
+    使用json语法表示一个对象
+  */
+  function f1(){
+	  var obj={"code":"65465","name":"sv","price":10};
+	  alert(obj.name);
+  }
+  function f2() {
+	var arr={"company":"阿萨德","address":{
+		"city":"北京",
+		"street":"北三环西路",
+		"room":2046
+	}	
+ };
+	alert(arr.address.street);
+}
+  function f3() {
+	var arr=[{"name":"sally","age":22},
+	{"name":"sally","age":22}];
+	alert(arr[1].name);
+}
+  //将json字符串转换成javascript对象json提供的方法
+  //来做转换。
+  function f4() {
+	  var str='{"name":"sally","age":22}';
+	  var obj=JSON.parse(str);
+	  alert(obj.name);
+	  
+}
+  function f5() {
+	var str='[{"name":"sally","age":22},'
+	+'{"name":"sally","age":22}]';
+	//转换完后，得到的是一个数组
+	var arr=JSON.parse(str);
+	alert(arr[1].name);
+}
+</script>
+</head>
+<body style="font-size: 30px;">
+<a href="javascript:f1();">Class</a><br>
+<a href="javascript:f2();">Class</a><br>
+
+<a href="javascript:f3();">Class</a><br>
+<a href="javascript:f4();">Class</a><br>
+<a href="javascript:f5();">Class</a>
+
+</body>
+</html>
