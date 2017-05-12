@@ -1,0 +1,5 @@
+public class singleton{
+ public void test(){
+   system.out.println("张三");
+ }
+}
